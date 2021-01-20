@@ -26,7 +26,7 @@
     - `.csv`, since it is easily readable and known
     - `.pkl`, since it is really useful in maintaining all the properties of the dataset
 
-    The cleaned dataframes can be found in the `data/final_df` directory.
+    The cleaned dataframes can be found in the `data/clean_df` directory.
 
 ### Update of 24/12
 - use of `apply` function instead of `for` to enhance performances
@@ -37,57 +37,57 @@
 ## 02 - First test with the APriori algorithm
 I decided that the best way of solving the problem was through the use of APriori.
 
-I chose to use this implementation: [https://pypi.org/project/efficient-apriori/] since I have used it in the past and I knew it was fast and reliable.
+I chose to use two different implementations, to see which was better.
+  - Efficient APriori [https://pypi.org/project/efficient-apriori/] since I have used it in the past and I knew it was fast and reliable.
+  - mlxtend Apriori [https://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/], found searching for other options
 
-I did two test:
+I did two test for each implementation:
 - the 1st one was on a day with a small number of tweets
 - the 2nd one was on a day with a large number of tweets
 
 From those tests I understood two main things:
 - I could not use the absolute value of the frequency --> the percentage on the total tweets of the day was more appropriate for a uniform analysis
 - Numbers create problems and provide no information --> here I took the decision to remove them
+- They provide the same results but the mlxtend is much faster, so I chose it as my main solution
 
 ---
 
 ## 03 - Use of APriori on the whole dataset, day by day
 Here I computed the APriori on each day of the dataset. 
 
-I imposed a rule:
-- The groups of words are only kept if their % frequency is higher than a threshold value that I set (0.015)
+I imposed a rule: the groups of words (itemsets) are only kept if their support is higher than a threshold value that I set to 0.015 (after some empirical tests).
 
-The results were hard to read (big list with dictionaries), so I took the time to store them in a clearer way. It follows an example:
+Note: support refers to the total number of times that the `itemset` was in the tweets of a given day divided by the total tweets of the day.
 
-| group_of_words  | dates                 | frequencies |
-|-----------------|-----------------------|-------------|
-| (word1, word2)  | [date1, date4, date6] | [12,6,20]   |
-| (word2, word7)  | [date2, date14]       | [10,100]    |
-| ...             | ...                   | ...         |
+I stored the results in a clearer way. It follows an example:
 
-As I did for the dataset, I then saved the results as `apriori_df.csv` and `apriori_df.pkl`.
+| itemsets        | dates                 | supports    | tot_dates   |
+|-----------------|-----------------------|-------------|-------------|
+| (word1, word2)  | [date1, date4, date6] | [12,6,20]   | 3           |
+| (word2, word7)  | [date2, date14]       | [10,100]    | 2           |
+| ...             | ...                   | ...         | ...         |
+
+As I did for the dataset, I then saved the results as `results_df.csv` and `results_df.pkl`.
 
 The results are stored in the `data/results` directory.
 
 Notes:
-- `dates`: days where the `group_of_words` were used frequently
-- `frequencies`: total number of times that the `group_of_words` was in the tweets of a given day divided by the total tweets of the day
+- `dates`: days where the `itemsets` were used frequently
+- `tot_dates`: total number of `dates` where the `itemset` is frequent (`support` > 0.015)
 ---
 
 ## 04 - Plot of the results
 We have all the results, but I thought it could be more meaningful to plot them.
 
 Here I understood that:
-- for the `frequencies` value it makes little sense to use the absolute value. It's better to use *count/total_tweets_of_the_day*
+- for the `supports` value it makes little sense to use the absolute value. It's better to use *count/total_tweets_of_the_day*
 
 ---
 
 ## 05 - Comparison with some base line method
 
-- I compared the `efficient APriori` algorithm with the `mlxtend` implementation
-- I run them both on the clean dataframe 10 times and confronted the mean time needed to compute the results
+- I compared the `mlxtend` algorithm implementation with the `efficient APriori` implementation
+- I run them both on the clean dataframe n = 100 times and confronted the mean time needed to compute the results
 - They provide the same results, but the `mlxtend` implementation is much faster
-
-### TODO
-- the test was done on my Desktop, try on the laptop for a wider view
-- use the `mlxtend` implementation in the analysis
 
 
