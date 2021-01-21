@@ -5,22 +5,17 @@
 
 ## Prerequisites 
 
-1) Installation of Python 3.8.5 or more
-2) For the program to run correctly, it is necessary to install some libraries. Below is the list of used libraries:
-    - `pandas`
-    - `math`
-    - `plotly.express`
-    - `ast`
-    - `collections`
-    - `statistics`
-    - `string`
-    - `datetime`
-    - `time`
-    - `json`
-    - `sys`
-    - `mlxtend`
+1) Installation of `Python 3.8.5` or more
+2) For the program to run correctly, it is necessary to install some libraries:
+    - `pandas 1.2.1`
+    - `mlxtend 0.18.0`
 
-    You can install new libraries with the following command, within the command prompt: `pip install name_of_library`
+    It is recommended to create a virtual environment for the project, where to install the required libraries. 
+    
+    To install the libraries, open the command prompt and activate your virtual environment. You can install the libraries in two ways:
+    - using `pip install -r requirements.txt` 
+    (once you have navigated to the `executable` directory)
+    - using `pip install name_of_library`
 
 ---
 

@@ -1,13 +1,6 @@
 import pandas as pd
-import math
-import plotly.express as px     # used to plot the data
-import ast                      # used to transform string into list
-from collections import Counter # used to count the occurrences of hashtags
-from statistics import mean
-import string                   # used to remove punctuation from text in an efficient way
 import datetime
 import time
-import json
 import sys
 
 # MLXTEND APRIORI
