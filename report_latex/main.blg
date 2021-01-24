@@ -8,48 +8,60 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: my_bibliography.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--no key, author in pandas
+Warning--no author, editor, organization, or key in pandas
+Warning--to sort, need author or key in pandas
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
 Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Warning--no key, author in pandas
+Warning--no key, author in pandas
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 1 entry,
+Warning--no key, author in pandas
+Warning--no author, editor, organization, or key in pandas
+Warning--empty author in pandas
+Warning--empty year in pandas
+Warning--empty year in python_website
+Warning--can't use both author and editor fields in Toivonen2010
+You've used 4 entries,
             5727 wiz_defined-function locations,
-            1300 strings with 14557 characters,
-and the built_in function-call counts, 857 in all, are:
-= -- 84
-> -- 20
+            1319 strings with 14967 characters,
+and the built_in function-call counts, 3202 in all, are:
+= -- 328
+> -- 60
 < -- 0
-+ -- 5
-- -- 8
-* -- 44
-:= -- 100
-add.period$ -- 5
-call.type$ -- 1
-change.case$ -- 5
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 72
-empty$ -- 52
-format.name$ -- 8
-if$ -- 163
++ -- 16
+- -- 24
+* -- 197
+:= -- 335
+add.period$ -- 22
+call.type$ -- 4
+change.case$ -- 19
+chr.to.int$ -- 4
+cite$ -- 19
+duplicate$ -- 309
+empty$ -- 225
+format.name$ -- 24
+if$ -- 700
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 52
-num.names$ -- 8
-pop$ -- 22
+missing$ -- 2
+newline$ -- 82
+num.names$ -- 24
+pop$ -- 138
 preamble$ -- 1
-purify$ -- 14
+purify$ -- 43
 quote$ -- 0
-skip$ -- 30
+skip$ -- 101
 stack$ -- 0
-substring$ -- 56
-swap$ -- 5
+substring$ -- 230
+swap$ -- 32
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 30
-warning$ -- 0
-while$ -- 8
+type$ -- 105
+warning$ -- 11
+while$ -- 27
 width$ -- 0
-write$ -- 59
+write$ -- 117
+(There were 11 warnings)

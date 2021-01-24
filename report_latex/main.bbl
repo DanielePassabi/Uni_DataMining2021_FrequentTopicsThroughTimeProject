@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{4}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,17 +37,51 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
-\bibitem[\protect\citeauthoryear{Poker-Edge.Com}{Poker-Edge.Com}{2006}]%
-        {Poker06}
-\bibfield{author}{\bibinfo{person}{Poker-Edge.Com}.}
-  \bibinfo{year}{2006}\natexlab{}.
-\newblock \bibinfo{title}{Stats and Analysis}.
+\bibitem[\protect\citeauthoryear{??}{pan}{[n.d.]}]%
+        {pandas}
+ \bibinfo{year}{[n.d.]}\natexlab{}.
+\newblock \bibinfo{title}{pandas}.
+\newblock \bibinfo{howpublished}{\url{https://pandas.pydata.org/}}.
 \newblock
 \newblock
+\shownote{Accessed: 24-01-2021.}
+
+
+\bibitem[\protect\citeauthoryear{Foundation}{Foundation}{[n.d.]}]%
+        {python_website}
+\bibfield{author}{\bibinfo{person}{Python~Software Foundation}.}
+  \bibinfo{year}{[n.d.]}\natexlab{}.
+\newblock \bibinfo{title}{Python documentation}.
+\newblock \bibinfo{howpublished}{\url{https://docs.python.org/3/}}.
+\newblock
+\newblock
+\shownote{Accessed: 24-01-2021.}
+
+
+\bibitem[\protect\citeauthoryear{Preda}{Preda}{2020}]%
+        {kaggle_df}
+\bibfield{author}{\bibinfo{person}{Gabriel Preda}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{title}{COVID19 Tweets}.
+\newblock
+  \bibinfo{howpublished}{\url{https://www.kaggle.com/gpreda/covid19-tweets}}.
+\newblock
+\newblock
+\shownote{Accessed: 25-01-2021.}
+
+
+\bibitem[\protect\citeauthoryear{Toivonen}{Toivonen}{2010}]%
+        {Toivonen2010}
+\bibfield{author}{\bibinfo{person}{Hannu Toivonen}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Frequent Itemset}}.
+\newblock \bibinfo{publisher}{Springer US}, \bibinfo{address}{Boston, MA},
+  \bibinfo{pages}{418--418}.
+\newblock
+\showISBNx{978-0-387-30164-8}
 \urldef\tempurl%
-\url{http://www.poker-edge.com/stats.php}
-\showURL{%
-Retrieved June 7, 2006 from \tempurl}
+\url{https://doi.org/10.1007/978-0-387-30164-8_317}
+\showDOI{\tempurl}
 
 
 \end{thebibliography}
