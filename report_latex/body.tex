@@ -1,26 +1,27 @@
 
-\section{Introduction \& Motivation}
+\section{Introduction \& Motivation}\label{sect_intro}
 
-The aim of this project is to identify popular themes over time, starting from Tweets texts. The first step of the analysis consists in identifying popular topics on a specific day, but the focus of this work lies in finding themes that recur over time.
+The aim of this project is to identify popular topics over time, starting from tweets texts. Some key concepts for understanding the problem follow:
+\begin{itemize}
+  \item \textbf{Tweet}: a short text (sequence of words) sent at a specific time by a specific individual. The collection of terms that a tweet contains is collectively describing a message. The appearance of a term in many tweets makes the term popular.
+  \item \textbf{Topic}: a set of terms. A popular topic is a set of terms that appear together in many tweets.
+\end{itemize}
 
-The problem that is faced falls within the large family of problems aimed at finding frequent items. More specifically, the data used belongs into the category of \textit{market-basket} model. In this kind of problems, there is on the one hand a set of \textit{items} and on the other \textit{baskets} containing them. A set of items present in many baskets is considered \textit{frequent}.
+The goal of this work is not, however, to identify popular topics in a tweets dataset. The objective is to identify consistent topics in time, which means \textit{identifying set of terms that become frequent together throughout time}.
 
-In the specific case of this project, dealing with social media texts, words are identified as items and tweets as baskets. By cleaning the text from noise (punctuation, extremely common words, ...) it is possible to identify common themes present in tweets. Once this is done, it's easy to investigate which topics are only momentarily popular and which are popular for longer periods of time.
+Solving the problem is very relevant because it not only allows researchers to investigate what are the causes that make a topic popular, but also to predict the reaction of the public in the future. Furthermore, the solution algorithm can be extended to solve many other similar problems where the initial premises are the same. The focus has been placed in the efficiency of the algorithm, so that it can be employed to solve similar problems with a large quantity of data, in a reasonable amount of time. Furthermore, importance was also given to the usability of the program.
 
-Solving the problem is very relevant because it not only allows us to investigate what are the causes that make a topic popular, but also to predict the reaction of the public in the future. Furthermore, the solution algorithm can be extended to solve many other similar problems where the initial premises are the same.
-
-The proposed solution exploits a Python optimized version of the \textit{APriori algorithm}, the most used in solving these problems. It is important to focus on the efficiency of the algorithm, as approaching the problem in a naïve way or trying to use brute-force could be very expensive in terms of time and resources.
-
+The first step of the analysis consists in identifying popular topics on every single day of the dataset. Then the results are merged to obtain all the itemset that are frequent in at least $n$ dates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Related work}
+\section{Related work}\label{sect_rel_work}
 
 The APriori algorithm is at the core of the solution algorithm presented in this report. In the proposed solution, there is an initial need to identify frequent, day-to-day sets of words. APriori is used in this operation. The results provided will then be combined in order to achieve the predicted objective: find frequent topics over time. APriori and its functioning will be briefly explained below, given their importance.
 
-APriori is among the most used algorithms to solve the problem of finding frequent itemsets. Frequent itemsets are a form of frequent pattern. Given examples that are sets of items and a minimum frequency, any set of items that occurs at least in the minimum number of examples is a frequent itemset \cite{Toivonen2010}. In the specific case considered, the goal is to identify the words (items) that are frequently used in many tweets (set of items).
+APriori is among the most used algorithms to solve the problem of finding frequent itemsets. Frequent itemsets are a form of frequent pattern. Given examples that are sets of items and a minimum frequency, any set of items that occurs at least in the minimum number of examples is a frequent itemset \cite{Toivonen2010}. In the specific case considered, the goal is to identify the words (items) that are frequently used in many tweets (set of items, or basket).
 
-At the hearth of the APriori algorithm there is a simple, yet powerful, premise: a large set of items cannot be frequent unless all the subsets that compose it are frequent. Following the logic of this principle, the algorithm initially focuses on smaller sets. In such manner, it manages to eliminate large sets of items from the list of candidates. This is crucial for the optimization of the solution.
+At the foundations of the APriori algorithm there is a simple, yet powerful, premise: a large set of items cannot be frequent unless all the subsets that compose it are frequent. Following the logic of this principle, the algorithm initially focuses on smaller sets. In such manner, it manages to eliminate large sets of items from the list of candidates. This is crucial for the optimization of the solution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -34,7 +35,7 @@ The input required by the program is a dataset in \code{.pkl} format, necessary 
 
 The \code{text} column contains texts of tweets. A tweet is defined as a sequence of words. For this reason, they are stored in the datasets as lists of words, or terms. Each term, or group of terms, is a potential frequent topic over time.
 
-Every tweet must have an associated date. This is the purpose of the \code{date} column, which contains the information regard the day the tweet was posted, in the year-month-day format.
+Every tweet must have an associated date. This is the purpose of the \code{date} column, which contains information regarding the day in which tweet was posted, in the year-month-day format.
 
 In order to fully understand the data used, it follows a small sample of the cleaned dataset used as input.
 
@@ -64,13 +65,13 @@ It is possible for the user to decide the support value, when running the progra
 After running the algorithm, a dataset is obtained as an output. It has the following columns:
 
 \begin{itemize}
-  \item \code{itemsets}, groups of frequent words stored as a frozenset;
-  \item \code{dates}, the list of days in which the itemset was used;
-  \item \code{supports}, the list of the supports, one for each day;
+  \item \code{itemsets}, groups of frequent words stored as a frozenset, representing the topics;
+  \item \code{dates}, the list of days in which the itemset was frequent;
+  \item \code{supports}, the list of the supports, one for each day in which the topic was frequent;
   \item \code{tot\_dates}, an absolute measure of the total days in which the itemset was found.
 \end{itemize}
 
-A sample of the output follows.
+A sample of the output is provided in Table \ref{tab_output}.
 
 \begin{table}[h]
   \centering
@@ -80,11 +81,11 @@ A sample of the output follows.
   \toprule
   \textbf{itemsets}         & \textbf{dates}                     & \textbf{supports}      & \textbf{tot\_dates}  \\ \midrule
   (pandemic)                & {[}2020-7-24, 2020-7-25, ...{]}    & {[}0.03, 0.05, ...{]}  & 26                   \\
-  (covid, trump)            & {[}2020-7-24, 2020-8-16{]}         & {[}0.04, 0.07{]}       & 24                   \\
-  (covid, india)          & {[}2020-7-25, 2020-7-26, ...{]}    & {[}0.03, 0.04, ...{]}  & 12                   \\
-  ...                       & ...                                & ...                    & ...                  \\ \bottomrule
+  (covid, trump)            & {[}2020-7-24, 2020-8-16, ...{]}    & {[}0.04, 0.07, ...{]}  & 24                   \\
+  ...                       & ...                                & ...                    & ...                  \\
+  (covid, india)          & {[}2020-7-25, 2020-7-26{]}           & {[}0.03, 0.04{]}       & 2                    \\ \bottomrule
   \end{tabular}
-  \caption{Example of output data}
+  \caption{Example of output data \label{tab_output}}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -112,7 +113,7 @@ It is possible to find all the aforementioned steps in Figure \ref{figSol}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Implementation}
+\section{Implementation}\label{sect_impl}
 It follows a description of the tools used to implement the solution reported in section \ref{sect_solution}.
 
 \subsection*{Programming language}
@@ -137,7 +138,7 @@ To work properly, the algorithm needs some libraries, some already present in Py
 \code{mlxtend} It is a library of Python tools and extensions for data science. Their implementation of the APriori algorithm was used in the final solution algorithm.
 
 \vspace{4mm}
-Note: detailed information about Python core packages can be found on the official website \cite{python_website}. 
+Note: detailed information about Python core packages can be found on their official website \cite{python_website}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -181,13 +182,13 @@ Column \code{date} contains information regarding the day and specific time the 
 
 In the column \code{text}, the tweets texts are saved as a string. They are complete, therefore they contain punctuation, numbers, references to other users through the use of \code{@}, hashtags (and consequently the \code{\#} symbol), emojis, links, etc.
 
-It is crucial to clean the texts so that they contain as much information as possible. To achieve this objective, various steps have been taken to clean the texts; they are reported below.
+It is crucial to clean the texts so that they contain as much information as possible. To achieve this objective, various steps have been taken to obtain the final texts; they are reported below.
 
 \subsubsection*{Lowercase text}
 Each text was brought to its lowercase form, so that the algorithm does not differentiate words by capitalization.
 
 \subsubsection*{Link removal}
-Most tweets in the dataset are truncated. In these cases, the source link is shown at the end of the text, which adds no value to the text. Furthermore, users regularly post links that do not carry any information. For this reason all links have been removed.
+Most tweets in the dataset are truncated. In these cases, the source link is shown at the end of the text, which adds no value to the tweet. Furthermore, users regularly post links that do not carry any information. For this reason all links have been removed.
 
 \subsubsection*{Punctuation, symbols and numbers removal}
 Initially it was decided to keep the numbers, but various tests showed that not only did they not carry information, but segmented it. As for punctuation and symbols, it is clear that in this case they are not useful, and so they have been removed.
@@ -197,6 +198,9 @@ Stopwords are extremely common words, like prepositions, conjunctions and some o
 
 \subsubsection*{Stemming}
 Stemming is the process of reducing inflected or derived words to their word base form. It was used because, intuitively, similar words can refer to the same topic (e.g., scared, scary, scariest, etc.). An example of stemming can be seen in Figure \ref{stem}.
+
+\subsubsection*{From string to list of words}
+It is easier and more intuitive to work with lists of terms, rather than with strings. So, list were chosen as the data type to store the tweets.
 
 \begin{figure}[h]
   \includegraphics[scale=0.25]{stem.png}
@@ -210,11 +214,7 @@ In order to clean all the texts, about 180,000 iterations had to be done. The pr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Experimental Evaluation}
- 
-Perform the necessary steps to illustrate that the method is good – or is not good. You can do this through a user evaluation and also through comparison with some base line method. It is up to you to select the base line method. Then you can compare the results and comment on what you observe. You should also care not only about the quality but also about the scalability, i.e., time, related to the size of the data. In this section, you should also have a subsection called Dataset in which you describe how you created the test dataset.
-
-----------------------------------------------------------------------------
+\section{Experimental Evaluation}\label{sect_exp_eval}
 
 \subsection*{User evaluation}
 In order to obtain a reasonable user evaluation, the algorithm code was sent to 10 people, along with instructions on how to execute it.
@@ -223,11 +223,81 @@ Five of these people are computer science graduates, thus they are accustomed to
 
 The other five are external to the world of information technology. Only one of them managed to successfully execute the code without external supervision. The problem others encountered was not with the instructions or execution of the specific code, but with the environment it requires to function properly. It was difficult for them to install the Python environment, manage environment variables and execute command line instructions. They needed outside supervision to be able to correctly run the code.
 
-The best solution to make the code more accessible would be through the creation of an executable. Getting an executable from a \code{.py} file in Python is not straightforward, but there are some libraries that make the process easier. It is possible to use the \code{pyinstaller} library, although there are some limitations. The first one is that the generated executable only works on the same type of operating system on which it was created. So, to cover most of the users, an executable for Windows, Linux and MacOS should be generated. Furthermore, in this specific case, the user still has to run the program from the command line, if he wants to use custom parameters. After giving the executable to the four people who had been having problems installing Python, they were able to successfully run the program.
+The best solution to make the code more accessible would be through the creation of an executable. Getting an executable from a \code{.py} Python script is not straightforward, but there are some libraries that make the process easier. It is possible to use the \code{pyinstaller} library, although there are some limitations. The first one is that the generated executable only works on the same type of operating system on which it was created. So, to cover most of the users, an executable for Windows, Linux and MacOS should be generated. Furthermore, in this specific case, the user still has to run the program from the command line, if he wants to use custom parameters. After giving the executable to the four people who had been having problems installing Python, they were able to successfully run the program.
 
 A further improvement would consist in adding a graphical interface, with the possibility to choose the parameters to be used in the execution of the algorithm, as well as the possibility to select the initial dataset and where to save the final results.
 
 \subsection*{Time comparison with baseline}
 
+In the solution program, most of the computational cost lies in using the APriori algorithm to find itemsets that are frequent on each day of the dataset. Thus, the focus was mainly on its performance.
+
+\subsubsection*{Naïve approach}
+The problem of finding frequent itemsets can be approached naively. However, this entails enormous computational costs and limitations in the results obtained. Indeed, for a set of items $U$, there are a total of $2^{|U|}-1$ distinct subsets (if we do not consider empty subsets). The simplest way to get the results is to generate all these possible candidates and count how many times they appear in the dataset. It is intuitive to understand how, when $U$ is very large, this approach is impractical. As a simple example, just think that when $U = 1000$, there are $2^{1000}$ possible candidates, a number equal to about $10^{301}$. It is not possible for today's computers to keep all these information in the main memory.
+
+\subsubsection*{APriori algorithm}
+Given the impossibility of dealing with the problem in a naïve way, it was opted for the use of the APriori algorithm. The choice fell on this algorithm as it is well-established in the world of data mining, and for the completeness of the results it provides. As explained in section \ref{sect_rel_work}, APriori does not need to generate all possible candidates, which makes the algorithm much less computationally heavy. To justify the choice of using library \code{mlxtend}, a study was carried out on the resolution times of the first part of the final algorithm.
+
+A baseline was selected: the implementation of APriori of the library \code{efficient-apriori }\cite{eff_apr}.
+
+First it was made sure that the algorithms gave exactly the same results. Subsequently, each algorithm was run 100 times, with the following input:
+\begin{itemize}
+  \item the clean dataset, containing about 180,000 tweets, from a period from July 24, 2020 to August 30, 2020
+  \item a support of 0.012
+\end{itemize}
+
+All tests were carried out on the same computer, with the following components:
+\begin{itemize}
+  \item Intel Core i7-9700K processor
+  \item DDR4-RAM 3600 MHz 2x8GB
+\end{itemize}
+
+
+At the end of the execution, the average times of each algorithm were calculated. The results are reported in Table \ref{tab_apriori_times}.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{@{}lc@{}}
+  \toprule
+  \textbf{Library}     & \textbf{Average time (s)}                                         \\ \midrule
+  mlxtend              & 20.7336 \\
+  efficient-apriori    & 63.7155 \\ \bottomrule
+  \end{tabular}
+  \caption{Average execution time of \textit{mlxtend apriori} and \textit{efficient-apriori}}
+  \label{tab_apriori_times}
+\end{table}
+
+It is clear from the results obtained that, although the output of the two algorithms is identical, the \code{mlxtend} version is much more optimized. On average, it takes a third of the time to perform the same calculations.
+
 
 \subsection*{Scalability evaluation}
+Finally, a test of the scalability of the program was performed. The APriori algorithm was run multiple times on a growing sample of tweets. Each run time was monitored. This simulates the time required to analyse a single day of the dataset. In Table \ref{tab_apriori_sc} and in Figure \ref{fig_times} it is possible to see how the times grow exponentially as the number of tweets increases. To compute the solution for a few thousand tweets the times vary from tenths of a second to a few seconds. However, when 256,000 tweets are considered, the time required to find the frequent itemset is about 34 minutes. Assuming an analysis is performed over 30 days, with 256,000 tweets for each day, the solution algorithm could take about $34 \cdot 30 = 1020$ minutes (about 17 hours) to deliver the results.  Considering the amount of data involved, it is not a poor result.
+
+  
+\begin{table}[h]
+  \centering
+  \begin{tabular}{@{}ll@{}}
+  \toprule
+  \textbf{N of tweets}   & \textbf{Time (s)}                                         \\ \midrule
+  1,000                  & 0.043875 \\
+  2,000                  & 0.141626 \\
+  4,000                  & 1.259605 \\
+  8,000                  & 2.731888 \\
+  16,000                 & 1.588751 \\
+  32,000                 & 3.834265 \\
+  64,000                 & 14.126312 \\
+  128,000                & 42.445597 \\
+  256,000                & 2044.150201 \\ \bottomrule
+  \end{tabular}
+  \caption{Time of execution based on tweets number}
+  \label{tab_apriori_sc}
+\end{table}
+
+\begin{figure}[h]
+  \includegraphics[scale=0.415]{scalability.png}
+  \centering
+  \caption{Time of execution based on tweets number}
+  \label{fig_times}
+\end{figure}
+
+Note: the second part of the final solving algorithm is extremely fast and there are no substantial differences in terms of time, even with large datasets.
+

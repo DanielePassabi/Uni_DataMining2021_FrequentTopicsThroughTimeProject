@@ -21,47 +21,48 @@ Warning--no key, author in pandas
 Warning--no author, editor, organization, or key in pandas
 Warning--empty author in pandas
 Warning--empty year in pandas
+Warning--empty year in eff_apr
 Warning--empty year in python_website
 Warning--can't use both author and editor fields in Toivonen2010
-You've used 4 entries,
+You've used 5 entries,
             5727 wiz_defined-function locations,
-            1319 strings with 14967 characters,
-and the built_in function-call counts, 3202 in all, are:
-= -- 328
-> -- 60
+            1323 strings with 15078 characters,
+and the built_in function-call counts, 3837 in all, are:
+= -- 392
+> -- 78
 < -- 0
-+ -- 16
-- -- 24
-* -- 197
-:= -- 335
-add.period$ -- 22
-call.type$ -- 4
-change.case$ -- 19
++ -- 22
+- -- 31
+* -- 236
+:= -- 417
+add.period$ -- 28
+call.type$ -- 5
+change.case$ -- 24
 chr.to.int$ -- 4
-cite$ -- 19
-duplicate$ -- 309
-empty$ -- 225
-format.name$ -- 24
-if$ -- 700
-int.to.chr$ -- 2
+cite$ -- 21
+duplicate$ -- 365
+empty$ -- 268
+format.name$ -- 31
+if$ -- 839
+int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 2
-newline$ -- 82
-num.names$ -- 24
-pop$ -- 138
+newline$ -- 92
+num.names$ -- 31
+pop$ -- 169
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 50
 quote$ -- 0
-skip$ -- 101
+skip$ -- 116
 stack$ -- 0
-substring$ -- 230
-swap$ -- 32
+substring$ -- 263
+swap$ -- 37
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 105
-warning$ -- 11
-while$ -- 27
+type$ -- 129
+warning$ -- 12
+while$ -- 34
 width$ -- 0
-write$ -- 117
-(There were 11 warnings)
+write$ -- 136
+(There were 12 warnings)

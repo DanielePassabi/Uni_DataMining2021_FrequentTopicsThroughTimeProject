@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -47,10 +47,22 @@
 \shownote{Accessed: 24-01-2021.}
 
 
-\bibitem[\protect\citeauthoryear{Foundation}{Foundation}{[n.d.]}]%
+\bibitem[\protect\citeauthoryear{Foundation}{Foundation}{[n.d.]a}]%
+        {eff_apr}
+\bibfield{author}{\bibinfo{person}{2021 Python~Software Foundation}.}
+  \bibinfo{year}{[n.d.]}\natexlab{a}.
+\newblock \bibinfo{title}{efficient-apriori 1.1.1}.
+\newblock
+  \bibinfo{howpublished}{\url{https://pypi.org/project/efficient-apriori/s}}.
+\newblock
+\newblock
+\shownote{Accessed: 25-01-2021.}
+
+
+\bibitem[\protect\citeauthoryear{Foundation}{Foundation}{[n.d.]b}]%
         {python_website}
 \bibfield{author}{\bibinfo{person}{Python~Software Foundation}.}
-  \bibinfo{year}{[n.d.]}\natexlab{}.
+  \bibinfo{year}{[n.d.]}\natexlab{b}.
 \newblock \bibinfo{title}{Python documentation}.
 \newblock \bibinfo{howpublished}{\url{https://docs.python.org/3/}}.
 \newblock

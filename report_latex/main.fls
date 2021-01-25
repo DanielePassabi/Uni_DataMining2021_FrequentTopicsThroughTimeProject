@@ -280,12 +280,9 @@ INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex\latex\libertine\ts1linu
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ts1.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTB-tlf-t1.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTB-tlf-t1.tfm
-INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\body.tex
-INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\body.tex
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTI-tlf-t1.tfm
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-4.tfm
+INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\body.tex
+INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\body.tex
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ot1.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\nxlmi.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxsy.tfm
@@ -296,7 +293,9 @@ INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\nxlm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxsym.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ts1.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-4.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinBiolinumTB-tlf-t1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinBiolinumTB-tlf-t1--base.tfm
 INPUT C:\Users\Daniele\AppData\Local\MiKTeX\pdftex\config\pdftex.map
@@ -308,16 +307,24 @@ INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\L
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-t1--base.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineTB-tlf-t1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTB-tlf-t1--base.tfm
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineTB-tlf-t1.vf
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTB-tlf-t1--base.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineT-tlf-t1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-t1--base.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineTI-tlf-t1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTI-tlf-t1--base.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntxsy.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txsys.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txex-bar.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineTB-tlf-t1.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTB-tlf-t1--base.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineT-tlf-ts1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ts1--base.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineT-tlf-t1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-t1--base.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\nxlmi.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\LibertineMathMI.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\NewTXMI.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\stxscr.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ts1.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-t1.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ot1.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ot1.tfm
@@ -347,13 +354,6 @@ INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\repor
 INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\solution.png
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineT-tlf-ts1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ts1--base.tfm
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\nxlmi.vf
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\LibertineMathMI.tfm
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\NewTXMI.tfm
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\stxscr.tfm
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntxsy.vf
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txsys.tfm
-INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txex-bar.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineTB-tlf-t1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTB-tlf-t1--base.tfm
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineT-tlf-t1.vf
@@ -372,6 +372,29 @@ INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\repor
 INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\stem.png
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinBiolinumTI-tlf-t1.vf
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinBiolinumTI-tlf-t1--base.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTBI-tlf-t1.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineT-tlf-ot1.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ot1--base.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntxsy7.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txsys.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txex-bar.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\nxlmi7.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\LibertineMathMI7.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\NewTXMI7.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\stxscr.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\nxlmia.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\LibertineMathRM.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txmiaSTbb.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txmiaX.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineT-tlf-ot1.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineT-tlf-ot1--base.tfm
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\vf\public\libertine\LinLibertineTBI-tlf-t1.vf
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTBI-tlf-t1--base.tfm
+INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\scalability.png
+INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\scalability.png
+INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\scalability.png
+INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\scalability.png
+INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\scalability.png
 INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.bbl
 INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.bbl
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\LinLibertineTI-tlf-t1.tfm
@@ -380,6 +403,8 @@ INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\tfm\public\libertine\
 INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.aux
 INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.out
 INPUT c:\Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.out
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\libertine\lbtn_ki75ao.enc
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\libertine\lbtn_oexx6f.enc
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\libertine\lbtn_25tcsq.enc
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\inconsolata\i4-t1-4.enc
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\libertine\lbtn_naooyc.enc
@@ -390,6 +415,8 @@ INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\inconsol
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\inconsolata\Inconsolata-zi4r.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\LibertineMathMI.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\LibertineMathMI.pfb
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\LibertineMathMI7.pfb
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\LibertineMathMI7.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinBiolinumT.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinBiolinumT.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinBiolinumTB.pfb
@@ -400,7 +427,11 @@ INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertin
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinLibertineT.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinLibertineTB.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinLibertineTB.pfb
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinLibertineTBI.pfb
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinLibertineTBI.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinLibertineTI.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\libertine\LinLibertineTI.pfb
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txmiaX.pfb
+INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txmiaX.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txsys.pfb
 INPUT C:\Users\Daniele\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txsys.pfb
