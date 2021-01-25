@@ -7,29 +7,45 @@ import sys
 from mlxtend.frequent_patterns import apriori as mlxtend_apriori
 from mlxtend.preprocessing import TransactionEncoder
 
-print(" > All libreries imported")
+print("\n > All libreries imported")
 
 ###
 
-# minimum support
-min_supp = float(sys.argv[1])
+# all the arguments must be passed, the order IS relevant
+if len(sys.argv) == 4: # NB: 4 because argv[0] is the name of the script
+    # minimum support
+    min_supp = float(sys.argv[1])
 
-# minumum number of dates in which the itemset has to compare (if 0 --> all)
-min_dates = int(sys.argv[2])
+    # minimum number of dates in which the itemset has to compare (if 0 --> all)
+    min_dates = int(sys.argv[2])
 
-# number of total rows in the solution (if 0 --> all)
-number_of_itemsets = int(sys.argv[3])
+    # number of total rows in the solution (if 0 --> all)
+    number_of_itemsets = int(sys.argv[3])
+else:
+    # Default parameters
+    min_supp = 0.015
+    min_dates = 2
+    number_of_itemsets = 0 # all
+
+print("\n > Parameters setted")
+print(" >> Support:", min_supp)
+print(" >> Minimum number of dates per topic:", min_dates)
+
+if number_of_itemsets == 0:
+    print(" >> Total number of topics in the results: max")
+else:
+    print(" >> Total number of topics in the results:", number_of_itemsets)
 
 ###
 
 df_path = "../data/clean_df/clean_df.pkl"
 df = pd.read_pickle(df_path)
 
-print(" > Dataset correctly imported")
+print("\n > Dataset correctly imported")
 
 ###
 
-print(" > Start of Apriori computation")
+print("\n > Start of Apriori computation")
 
 start = time.time()
 
@@ -71,7 +87,7 @@ print(" > Elapsed time:", "%.2f" % round(mlxtend_apriori_time, 2), "seconds")
 
 ###
 
-print(" > Obtaining results...")
+print("\n > Obtaining results...")
 
 final_results = {}
 
@@ -140,4 +156,4 @@ if number_of_itemsets != 0 and number_of_itemsets < len(final_results_df):
 final_results_df.to_csv("../data/results/results_df_exec.csv")
 final_results_df.to_pickle("../data/results/results_df_exec.pkl")
 
-print(" > Results correctly stored in 'data/results'")
+print("\n > Results correctly stored in 'data/results'")
