@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.9)  25 JAN 2021 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.9)  30 JAN 2021 17:37
 entering extended mode
 **"c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/main.tex"
 ("c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/main.tex"
@@ -789,11 +789,11 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<man_on_the_phone.png, id=42, 3325.92563pt x 828.09375pt>
-File: man_on_the_phone.png Graphic file (type png)
-<use man_on_the_phone.png>
-Package pdftex.def Info: man_on_the_phone.png  used on input line 57.
-(pdftex.def)             Requested size: 489.50787pt x 121.8711pt.
+<banner.png, id=42, 1882.03125pt x 472.01344pt>
+File: banner.png Graphic file (type png)
+<use banner.png>
+Package pdftex.def Info: banner.png  used on input line 57.
+(pdftex.def)             Requested size: 489.50787pt x 122.76381pt.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF on input line 57.
  (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/libertine\ts1linuxlibertinet-tlf.fd
 File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/LinuxLibertineT-TLF.
@@ -813,55 +813,48 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
  ("c:/Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\body.tex"
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 6.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 34.
+ [1.1{C:/Users/Daniele/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+
+ <c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/banner.png>]
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 49.
  (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 34.
+(Font)              scaled to size 9.0pt on input line 49.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1.1{C:/Users/Daniele/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
-
- <c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/man_on_the_phone.png>]
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 47.
+(Font)              scaled to size 9.0pt on input line 62.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 78.
+(Font)              scaled to size 8.0pt on input line 93.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 80.
+(Font)              scaled to size 8.0pt on input line 95.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 80.
+(Font)              scaled to size 6.2pt on input line 95.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 82.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<solution.png, id=70, 794.97pt x 907.89188pt>
+(Font)              scaled to size 8.0pt on input line 97.
+<solution.png, id=74, 794.97pt x 907.89188pt>
 File: solution.png Graphic file (type png)
 <use solution.png>
-Package pdftex.def Info: solution.png  used on input line 108.
+Package pdftex.def Info: solution.png  used on input line 123.
 (pdftex.def)             Requested size: 232.13658pt x 265.11053pt.
-[2.2 <c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/solution.png>]
-<dates_and_tweets.png, id=89, 526.96875pt x 301.125pt>
+ [2.2 <c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/solution.png>]
+<dates_and_tweets.png, id=92, 526.96875pt x 301.125pt>
 File: dates_and_tweets.png Graphic file (type png)
 <use dates_and_tweets.png>
-Package pdftex.def Info: dates_and_tweets.png  used on input line 154.
+Package pdftex.def Info: dates_and_tweets.png  used on input line 169.
 (pdftex.def)             Requested size: 231.86696pt x 132.49539pt.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 188.
+(Font)              scaled to size 9.0pt on input line 203.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 188.
-<stem.png, id=92, 634.62094pt x 350.81062pt>
+(Font)              scaled to size 9.0pt on input line 203.
+<stem.png, id=95, 634.62094pt x 350.81062pt>
 File: stem.png Graphic file (type png)
 <use stem.png>
-Package pdftex.def Info: stem.png  used on input line 206.
+Package pdftex.def Info: stem.png  used on input line 218.
 (pdftex.def)             Requested size: 158.65485pt x 87.70244pt.
 
 
@@ -869,40 +862,38 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3.3 <c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/dates_and_tweets.png>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
-(Font)              scaled to size 9.0pt on input line 265.
+(Font)              scaled to size 9.0pt on input line 284.
  [4.4 <c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/stem.png>]
 <scalability.png, id=137, 560.8453pt x 607.51968pt>
 File: scalability.png Graphic file (type png)
 <use scalability.png>
-Package pdftex.def Info: scalability.png  used on input line 296.
+Package pdftex.def Info: scalability.png  used on input line 315.
 (pdftex.def)             Requested size: 232.74646pt x 252.11597pt.
 ) ("c:/Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.bbl"
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 89.
-) [5.5
-
- <c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/scalability.png>]
+) [5.5 <c:/Users/Daniele/Documents/Programmazione/Github/Data Mining Project/report_latex/scalability.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
  ("c:/Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 07FE34623E1BE79CDBF7CA81A0A01C4E;1119.
+(rerunfilecheck)             Checksum: C1B4294400DB3C0651248D69AB07BAB0;1119.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 20370 strings out of 480790
- 327066 string characters out of 2896364
+ 20378 strings out of 480790
+ 327203 string characters out of 2896364
  599644 words of memory out of 3000000
  35555 multiletter control sequences out of 15000+200000
- 685768 words of font info for 266 fonts, out of 3000000 for 9000
+ 686673 words of font info for 271 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 63i,11n,101p,1098b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/LibertineMathMI.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/LibertineMathMI7.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinBiolinumT.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinBiolinumTI.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibertineT.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibertineTBI.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibertineTI.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb>
-Output written on "c:/Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.pdf" (5 pages, 839025 bytes).
+ 63i,12n,101p,1381b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/LibertineMathMI.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/LibertineMathMI7.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinBiolinumT.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinBiolinumTI.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibertineT.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibertineTBI.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibertineTI.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb>
+Output written on "c:/Users\Daniele\Documents\Programmazione\Github\Data Mining Project\report_latex\main.pdf" (5 pages, 1245254 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
+ 227 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
  47726 words of extra memory for PDF output out of 51595 (max. 10000000)
 

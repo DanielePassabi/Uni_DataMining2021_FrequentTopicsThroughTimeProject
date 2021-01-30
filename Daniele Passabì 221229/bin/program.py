@@ -91,7 +91,7 @@ print("\n > Obtaining results...")
 
 final_results = {}
 
-# iterate on every [date, [[group_of_2],[group_of_3]]]
+# iterate on every [date, df]
 for res in results_list:
 
     date = res[0]    # get the date

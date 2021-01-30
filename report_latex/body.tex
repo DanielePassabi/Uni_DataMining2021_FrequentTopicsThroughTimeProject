@@ -7,11 +7,9 @@ The aim of this project is to identify popular topics over time, starting from t
   \item \textbf{Topic}: a set of terms. A popular topic is a set of terms that appear together in many tweets.
 \end{itemize}
 
-The goal of this work is not, however, to identify popular topics in a tweets dataset. The objective is to identify consistent topics in time, which means \textit{identifying set of terms that become frequent together throughout time}.
+The goal of this work is not, however, to identify popular topics in a tweets dataset. The objective is to identify consistent topics in time, which means \textit{identifying set of terms that become frequent together throughout time}. The first step of the solution consists in identifying popular topics on every single day of the dataset. Then the results are merged to obtain all the itemset that are frequent in at least $n$ dates.
 
 Solving the problem is very relevant because it not only allows researchers to investigate what are the causes that make a topic popular, but also to predict the reaction of the public in the future. Furthermore, the solution algorithm can be extended to solve many other similar problems where the initial premises are the same. The focus has been placed in the efficiency of the algorithm, so that it can be employed to solve similar problems with a large quantity of data, in a reasonable amount of time. Furthermore, importance was also given to the usability of the program.
-
-The first step of the analysis consists in identifying popular topics on every single day of the dataset. Then the results are merged to obtain all the itemset that are frequent in at least $n$ dates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -21,7 +19,7 @@ The APriori algorithm is at the core of the solution algorithm presented in this
 
 APriori is among the most used algorithms to solve the problem of finding frequent itemsets. Frequent itemsets are a form of frequent pattern. Given examples that are sets of items and a minimum frequency, any set of items that occurs at least in the minimum number of examples is a frequent itemset \cite{Toivonen2010}. In the specific case considered, the goal is to identify the words (items) that are frequently used in many tweets (set of items, or basket).
 
-At the foundations of the APriori algorithm there is a simple, yet powerful, premise: a large set of items cannot be frequent unless all the subsets that compose it are frequent. Following the logic of this principle, the algorithm initially focuses on smaller sets. In such manner, it manages to eliminate large sets of items from the list of candidates. This is crucial for the optimization of the solution.
+At the foundations of the APriori algorithm there is a simple, yet powerful, premise: a large set of items cannot be frequent unless all the subsets that compose it are frequent. Following the logic of this principle, the algorithm initially focuses on smaller sets. In such manner, it manages to eliminate large sets of items from the list of candidates. This is crucial for the optimization of the solution, since the algorithm does not have to try all the possible candidates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,15 +27,32 @@ At the foundations of the APriori algorithm there is a simple, yet powerful, pre
 
 This section will specifically describe what input is required by the algorithm and what the generated output is.
 
+\subsection*{Formal model}
+
+\begin{itemize}
+  \item $T =$ set of tweets, or sequences of words;
+  \item $D =$ set of dates, one for each tweet.
+\end{itemize}
+
+It follows the utility function $u$.
+
+$$ u: T \times D \rightarrow I \times D $$
+
+where:
+\begin{itemize}
+  \item $I =$ set of topics (or itemset, group of words);
+  \item Every topic of $I$ is present in a minimum of 2 dates.
+\end{itemize}
+
 \subsection*{Input}
 
 The input required by the program is a dataset in \code{.pkl} format, necessary for the properties of the variables inside it to be maintained and recognized by the algorithm. There must be two columns in the dataset: \code{text} and \code{date}.
 
 The \code{text} column contains texts of tweets. A tweet is defined as a sequence of words. For this reason, they are stored in the datasets as lists of words, or terms. Each term, or group of terms, is a potential frequent topic over time.
 
-Every tweet must have an associated date. This is the purpose of the \code{date} column, which contains information regarding the day in which tweet was posted, in the year-month-day format.
+Every tweet must have an associated date. This is the purpose of the \code{date} column, which contains information regarding the day in which the tweet was posted, in the year-month-day format.
 
-In order to fully understand the data used, it follows a small sample of the cleaned dataset used as input.
+In order to fully understand the required input, it follows a small sample of the cleaned dataset used.
 
 \begin{table}[h]
   \centering
@@ -58,9 +73,9 @@ Notes: some words in Table \ref{tab_input} may appear truncated, other missing. 
 
 The interest is placed in finding groups of frequently repeated words within the tweets of several days, in order to find frequent topics over time. We assume that a group can also consist of a single word: even alone a word can identify a topic (for example \textit{mask}, or \textit{vaccine}).
 
-Before proceeding with the output provided by the program, it is necessary to introduce the concept of \textbf{support}. It is a measure that allows to identify groups of frequent words based on a threshold value. The absolute support for an itemset $I$ is equal to the number of itemsets containing all items in $I$. Since there is a different number of tweets available for each day of the dataset, it is not feasible to use an absolute measure. For this reason it was used the absolute support divided by the total number of itemsets of the specific considered day. In practice, the support was found by dividing the total number of times in which a group of words appeared in a day by the total tweets of that day. 
+Before proceeding with the output provided by the program, it is necessary to introduce the concept of \textbf{support}. It is a measure that allows to identify groups of frequent words based on a threshold value. The absolute support for an itemset $I$ is equal to the number of itemsets containing all items in $I$. Since there is a different number of tweets available for each day of the dataset, it is not feasible to use an absolute measure. For this reason it was used the relative support. In practice, the support was found by dividing the total number of times in which a group of words appeared in a day by the total tweets of that day. 
 
-It is possible for the user to decide the support value, when running the program. After numerous empirical tests, values around 0.015 are recommended. It is also possible to set the total number of results to be obtained, as well as the minimum number of days in which an itemset must be present to be part of the final solution.
+It is possible for the user to decide the \textit{support} value, when running the program. After numerous empirical tests, values around 0.015 are recommended. It is also possible to set the \textit{total number of results} to be obtained, as well as the \textit{minimum number of days} in which an itemset has to be present to be part of the final solution.
 
 After running the algorithm, a dataset is obtained as an output. It has the following columns:
 
@@ -132,7 +147,7 @@ To work properly, the algorithm needs some libraries, some already present in Py
 \code{time} Built-in Python module which provides various time-related functions. It is not strictly related to the algorithm, but is used to track the time taken by the program to solve the problem and notify the user.
 
 \vspace{2mm}
-\code{sys} Built-in Python module that provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It has been used to manage the parameters provided by the user, in order to provide a solution suited to his needs.
+\code{sys} Built-in Python module that provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It has been used to manage the parameters specified by the user, in order to grant a solution suited to his needs.
 
 \vspace{2mm}
 \code{mlxtend} It is a library of Python tools and extensions for data science. Their implementation of the APriori algorithm was used in the final solution algorithm.
@@ -176,7 +191,7 @@ In addition to the texts of the tweets and the corresponding dates, the author h
 
 Since they are of no use to the study, they have been removed. As shown in section \ref{sect_probl_stat}, only the \code{text} and \code{date} columns have been preserved.
 
-Column \code{date} contains information regarding the day and specific time the tweet was published. Only days were kept; information about the hours, minutes and seconds of the post were removed.
+Column \code{date} originally contained information regarding the day and specific time the tweet was published. Only days were kept; information about the hours, minutes and seconds of the post were removed.
 
 \subsection*{Text cleaning}
 
@@ -188,19 +203,16 @@ It is crucial to clean the texts so that they contain as much information as pos
 Each text was brought to its lowercase form, so that the algorithm does not differentiate words by capitalization.
 
 \subsubsection*{Link removal}
-Most tweets in the dataset are truncated. In these cases, the source link is shown at the end of the text, which adds no value to the tweet. Furthermore, users regularly post links that do not carry any information. For this reason all links have been removed.
+Most tweets in the dataset are truncated. In these cases, the source link is shown at the end of the text, which adds no value to the tweet. Furthermore, users regularly post links that do not carry any semantic information. For this reason all links have been removed.
 
 \subsubsection*{Punctuation, symbols and numbers removal}
 Initially it was decided to keep the numbers, but various tests showed that not only did they not carry information, but segmented it. As for punctuation and symbols, it is clear that in this case they are not useful, and so they have been removed.
 
 \subsubsection*{Stopwords removal}
-Stopwords are extremely common words, like prepositions, conjunctions and some of the most common verbs. They carry little value to the meaning of the sentences. For this reason, each word is checked and if it is considered a stopword, it is removed from the sentence. There is no single stopwords dictionary, in this analysis the one provided by the \code{nltk.corpus} library was used.
+Stopwords are extremely common words, like prepositions, conjunctions and some of the most common verbs. They carry little value to the meaning of the sentences. For this reason, each word is checked and if it is considered a stopword, it is removed from the sentence. There is no single stopwords dictionary, in the preprocessing the one provided by the \code{nltk.corpus} library was used.
 
 \subsubsection*{Stemming}
 Stemming is the process of reducing inflected or derived words to their word base form. It was used because, intuitively, similar words can refer to the same topic (e.g., scared, scary, scariest, etc.). An example of stemming can be seen in Figure \ref{stem}.
-
-\subsubsection*{From string to list of words}
-It is easier and more intuitive to work with lists of terms, rather than with strings. So, list were chosen as the data type to store the tweets.
 
 \begin{figure}[h]
   \includegraphics[scale=0.25]{stem.png}
@@ -209,12 +221,26 @@ It is easier and more intuitive to work with lists of terms, rather than with st
   \label{stem}
 \end{figure}
 
+\subsubsection*{From string to list of words}
+It is easier and more intuitive to work with lists of terms, rather than with strings. So, list were chosen as the data type to store the tweets.
 
+\vspace{4mm}
 In order to clean all the texts, about 180,000 iterations had to be done. The process was quite time consuming: it took about 3 hours on an Intel Core i7-9700K processor. For this reason, the final clean dataset has been saved, ready to be used as an input to the algorithm.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experimental Evaluation}\label{sect_exp_eval}
+
+\textbf{Premise}: all tests reported in this section were carried out on the same machine, with the following components:
+\begin{itemize}
+  \item Intel Core i7-9700K processor
+  \item DDR4-RAM 3600 MHz 2x8GB
+  \item SSD NVMe PCIe M.2 2280 512Gb
+  \begin{itemize}
+    \item maximum read speed: 3400 megabyte/s
+    \item maximum write speed: 3000 megabyte/s
+  \end{itemize}
+\end{itemize}
 
 \subsection*{User evaluation}
 In order to obtain a reasonable user evaluation, the algorithm code was sent to 10 people, along with instructions on how to execute it.
@@ -245,13 +271,6 @@ First it was made sure that the algorithms gave exactly the same results. Subseq
   \item a support of 0.012
 \end{itemize}
 
-All tests were carried out on the same computer, with the following components:
-\begin{itemize}
-  \item Intel Core i7-9700K processor
-  \item DDR4-RAM 3600 MHz 2x8GB
-\end{itemize}
-
-
 At the end of the execution, the average times of each algorithm were calculated. The results are reported in Table \ref{tab_apriori_times}.
 
 \begin{table}[h]
@@ -270,7 +289,7 @@ It is clear from the results obtained that, although the output of the two algor
 
 
 \subsection*{Scalability evaluation}
-Finally, a test of the scalability of the program was performed. The APriori algorithm was run multiple times on a growing sample of tweets. Each run time was monitored. This simulates the time required to analyse a single day of the dataset. In Table \ref{tab_apriori_sc} and in Figure \ref{fig_times} it is possible to see how the times grow exponentially as the number of tweets increases. To compute the solution for a few thousand tweets the times vary from tenths of a second to a few seconds. However, when 256,000 tweets are considered, the time required to find the frequent itemset is about 34 minutes. Assuming an analysis is performed over 30 days, with 256,000 tweets for each day, the solution algorithm could take about $34 \cdot 30 = 1020$ minutes (about 17 hours) to deliver the results.  Considering the amount of data involved, it is not a poor result.
+Finally, a test of the scalability of the program was performed. The APriori algorithm was run multiple times on a growing sample of tweets. Each run time was monitored. This simulates the time required to analyse a single day of the dataset. In Table \ref{tab_apriori_sc} and in Figure \ref{fig_times} it is possible to see how the times grow exponentially as the number of tweets increases. To compute the solution for a few thousand tweets the times vary from tenths of a second to a few seconds. However, when 256,000 tweets are considered, the time required to find the frequent itemset is about 34 minutes. Assuming an analysis is performed over 30 days, with 256,000 tweets for each day, the solution algorithm could take about $34 \cdot 30 = 1020$ minutes (about 17 hours) to deliver the results.  Considering the amount of data involved, it is not a poor result. During this last execution of the algorithm, all the RAM was being used. To further improve performance, it is possible to increase the available memory or rely on algorithms that, even if they not always provide complete results, are less computationally heavy. For this study it was preferred to have the certainty of obtaining complete results at the expense of some performance.
 
   
 \begin{table}[h]

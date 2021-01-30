@@ -29,13 +29,13 @@
     The cleaned dataframes can be found in the `data/clean_df` directory.
 
 ### Update of 24/12
-- use of `apply` function instead of `for` to enhance performances
+- use of `apply` function instead of `for` to enhance performances in cleaning text procedure
 - added a `stemming` procedure in the cleaning of the data to get better results
 
 ---
 
 ## 02 - First test with the APriori algorithm
-I decided that the best way of solving the problem was through the use of APriori.
+The first part of the solution implies the finding of frequent itemsets for each day of the dataset. I decided to use the APriori algorithm.
 
 I chose to use two different implementations, to see which was better.
   - Efficient APriori [https://pypi.org/project/efficient-apriori/] since I have used it in the past and I knew it was fast and reliable.
@@ -46,34 +46,27 @@ I did two test for each implementation:
 - the 2nd one was on a day with a large number of tweets
 
 From those tests I understood two main things:
-- I could not use the absolute value of the frequency --> the percentage on the total tweets of the day was more appropriate for a uniform analysis
-- Numbers create problems and provide no information --> here I took the decision to remove them
-- They provide the same results but the mlxtend is much faster, so I chose it as my main solution
+- I could not use the absolute value of the support. The percentage on the total tweets of the day was more appropriate for a uniform analysis.
+- Numbers create problems and provide no information, so I took the decision to remove them from the tweets.
+- The two implementations provide the same results, but the mlxtend is much faster. For this reason its APriori implementation was used in the main solution.
 
 ---
 
-## 03 - Use of APriori on the whole dataset, day by day
+## 03 - Use of APriori on the whole dataset, day by day + final solution
 Here I computed the APriori on each day of the dataset. 
 
-I imposed a rule: the groups of words (itemsets) are only kept if their support is higher than a threshold value that I set to 0.015 (after some empirical tests).
+After the computation was complete, I stored the results in the following way.
 
-Note: support refers to the total number of times that the `itemset` was in the tweets of a given day divided by the total tweets of the day.
-
-I stored the results in a clearer way. It follows an example:
-
-| itemsets        | dates                 | supports    | tot_dates   |
-|-----------------|-----------------------|-------------|-------------|
-| (word1, word2)  | [date1, date4, date6] | [12,6,20]   | 3           |
-| (word2, word7)  | [date2, date14]       | [10,100]    | 2           |
-| ...             | ...                   | ...         | ...         |
+| itemsets        | dates                 | supports            | tot_dates   |
+|-----------------|-----------------------|---------------------|-------------|
+| (word1, word2)  | [date1, date4, date6] | [0.02,0.03,0.015]   | 3           |
+| (word2, word7)  | [date2, date14]       | [0.016,0.018]       | 2           |
+| ...             | ...                   | ...                 | ...         |
 
 As I did for the dataset, I then saved the results as `results_df.csv` and `results_df.pkl`.
 
 The results are stored in the `data/results` directory.
 
-Notes:
-- `dates`: days where the `itemsets` were used frequently
-- `tot_dates`: total number of `dates` where the `itemset` is frequent (`support` > 0.015)
 ---
 
 ## 04 - Plot of the results
@@ -84,10 +77,16 @@ Here I understood that:
 
 ---
 
-## 05 - Comparison with some base line method
+## 05 - Comparison with some baseline method
 
 - I compared the `mlxtend` algorithm implementation with the `efficient APriori` implementation
 - I run them both on the clean dataframe n = 100 times and confronted the mean time needed to compute the results
 - They provide the same results, but the `mlxtend` implementation is much faster
+
+---
+
+## 06 - Scalability test
+
+I run the algorithm on an increasing number of tweets and compared the times, to understand if we could use this solution with a very large amount of data. 
 
 
